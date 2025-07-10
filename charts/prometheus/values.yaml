@@ -192,7 +192,7 @@ server:
   image:
     repository: class01008/prometheus:v1
     # if not set appVersion field from Chart.yaml is used
-    tag: "v1"
+    tag: ""
     # When digest is set to a non-empty value, images will be pulled by digest (regardless of tag value).
     digest: ""
     pullPolicy: IfNotPresent
