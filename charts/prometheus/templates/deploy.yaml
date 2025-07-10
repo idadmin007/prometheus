@@ -61,7 +61,7 @@ spec:
         {{- if .Values.configmapReload.prometheus.enabled }}
         - name: {{ template "prometheus.name" . }}-{{ .Values.server.name }}-{{ .Values.configmapReload.prometheus.name }}
           {{- if .Values.configmapReload.prometheus.image.digest }}
-          image: "{{ tpl .Values.configmapReload.prometheus.image.repository . }}@{{ tpl .Values.configmapReload.prometheus.image.digest . }}"
+          image: "{{ tpl .Values.configmapReload.prometheus.image.repository . }}:{{ tpl .Values.configmapReload.prometheus.image.digest . }}"
           {{- else }}
           image: "{{ tpl .Values.configmapReload.prometheus.image.repository . }}:{{ tpl .Values.configmapReload.prometheus.image.tag . }}"
           {{- end }}
